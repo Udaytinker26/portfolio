@@ -1,0 +1,62 @@
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(244, 243, 239, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(244, 243, 239, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(244, 243, 239, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.hero-glow {
+  background: radial-gradient(closest-side, var(--color-accent-soft), transparent 70%);
+  filter: blur(10px);
+}
+
+.reveal-mask {
+  overflow: hidden;
+}
+
+.clip-reveal {
+  clip-path: inset(0 0 0 0);
+}
+
+.underline-grow {
+  position: relative;
+}
+
+.underline-grow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.underline-grow:hover::after {
+  transform: scaleX(1);
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, var(--color-line), var(--color-line));
+}
+
+.timeline-line-fill {
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-accent) 70%, transparent);
+}
+
+.card-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.arch-flow-line {
+  stroke-dasharray: 6 6;
+}
